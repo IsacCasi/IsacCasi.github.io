@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória Axie Díficil</title>
+    <link rel="stylesheet" href="stylejogo.css">
+    <link rel="stylesheet" href="stylejogoD.css">
+</head>
+
+<style>
+    #status-bar{
+        margin-top: 6rem;
+
+    }
+</style>
+
+<body>
+    <div id="logo">
+        <img src="logoAxie.png" alt=""/>
+    </div>
+    <div id="status">
+
+
+        <div class="card-container">
+            <!-- Cards com imagens (repetidos para formar pares) -->
+            <div class="card" data-name="catfish">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Aquatic/CATFISH.png" alt="catfish"></div>
+            </div>
+
+            <div class="card" data-name="catfish">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Aquatic/CATFISH.png" alt="catfish"></div>
+            </div>
+
+            <div class="card" data-name="arco">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Besta/ARCO.png" alt="arco"></div>
+            </div>
+
+            <div class="card" data-name="arco">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Besta/ARCO.png" alt="arco"></div>
+            </div>
+
+            <div class="card" data-name="furball">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Besta/FURBALL.png" alt="furball"></div>
+            </div>
+
+            <div class="card" data-name="furball">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Besta/FURBALL.png" alt="furball"></div>
+            </div>
+
+            <div class="card" data-name="potato">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Planta/POTATO LEAF.png" alt="potato"></div>
+            </div>
+
+            <div class="card" data-name="potato">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Planta/POTATO LEAF.png" alt="potato"></div>
+            </div>
+
+            <div class="card" data-name="herbivore">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Planta/HERBIVORE.png" alt="herbivore"></div>
+            </div>
+
+            <div class="card" data-name="herbivore">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Planta/HERBIVORE.png" alt="herbivore"></div>
+            </div>
+
+            <div class="card" data-name="grass snake">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Réptil/GRASS SNAKE.png" alt="grass snake"></div>
+            </div>
+
+            <div class="card" data-name="grass snake">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Réptil/GRASS SNAKE.png" alt="grass snake"></div>
+            </div>
+
+            <div class="card" data-name="kotaro">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Réptil/KOTARO.png" alt="kotaro"></div>
+            </div>
+
+            <div class="card" data-name="kotaro">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Réptil/KOTARO.png" alt="kotaro"></div>
+            </div>
+
+            <div class="card" data-name="cloud">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Bird/CLOUD.png" alt="cloud"></div>
+            </div>
+
+            <div class="card" data-name="cloud">
+                <div class="card-face card-front"></div>
+                <div class="card-face card-back"><img src="Bird/CLOUD.png" alt="cloud"></div>
+            </div>
+
+
+            <!-- Adicione o resto dos pares de imagens aqui -->
+        </div>
+        <div class="status-bar" id="status-bar">
+            <!-- <div id="bar-1">TENTATIVAS: <input id="attempts" type="text" value="8" disabled></div> -->
+            <div id="bar-1">TENTATIVAS: <span id="attempts">20</span></div>
+            <div id="bar-2" id="acertos">ACERTOS: <span id="correct">0</span></div>
+            <div id="bar-3">ERROS: <span id="wrong">0</span></div>
+        </div>
+
+
+        <!-- MODAL -->
+
+        <div id="modal">
+
+            <nav class="nav-modal">
+                <h1 id="result"></h1>
+                <button id="btn-menu">Menu</button>
+                <button id="btn-novamente">Tenta Novamente</button>
+                <button id="btn-proximo">Próximo Nível</button>
+            </nav>
+        </div>
+
+        <!-- AUDIO DO GAME -->
+        <audio id="myAudio" src="music-fundo-axie.mp3" autoplay loop></audio>
+        <audio id="correct-sound" src="AcertoAxie.mp3"></audio>
+        <audio id="fall-sound" src="error-notification.mp3"></audio>
+        <audio id="end-sound" src="end game.mp3"></audio>
+
+        <script src="Modal.js"></script>
+        <script src="JogoCartas.js"></script>
+        <script src="soundAxie.js"></script>
+        <script src="jsD.js"></script>
+
+</body>
+
+</html>

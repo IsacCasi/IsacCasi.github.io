@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_menu.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Menu Axie</title>
+</head>
+
+<body>
+
+    <section id="menu">
+        <div id="cont">
+            <div id="logo">
+                <img src="logoAxie.png" alt="">
+            </div>
+
+            <div id="iniciar">
+
+                <button id="start" class="dropdown-btn " onclick="toggleDropdown()">
+                    <a class="dropdown-btn" onclick="toggleDropdown()">
+                        <img src="espadas.png" alt="" class="dropdown-btn" onclick="toggleDropdown()">
+                        <h1 class="dropdown-btn" onclick="toggleDropdown()">START</h1>
+                    </a>
+                </button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="jogoCartasF.html" id="op1">
+                        <img src="verde.png" alt="" id="easy">
+                        <h1>FÁCIL</h1>
+                    </a>
+                    <a href="JogoCartasM.html" id="op2">
+                        <img src="amarelo.png" alt="" id="average">
+                        <h1>MÉDIO</h1>
+                    </a>
+                    <a href="jogoCartasD.html" id="op3">
+                        <img src="vermelho.png" alt="" id="hard">
+                        <h1>DÍFICIL</h1>
+                    </a>
+                </div>
+                <div id="selc">
+
+                    <button id="win">
+                        <i class='bx bx-trophy'></i>
+                    </button>
+
+                    <button id="user">
+                        <i class='bx bxs-user-circle'></i>
+                    </button>
+
+                    <button id="config">
+                        <i class='bx bx-cog'></i>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById("dropdown-content");
+            dropdownContent.classList.toggle("show");
+        }
+
+        // Fechar o dropdown se o usuário clicar fora dele
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
