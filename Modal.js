@@ -28,5 +28,5 @@ btn_proximo.onclick = function () {
         alert('TU É CARA OU A CARA!')
     }
 
-    window.location.href = '/jogoCartas' + dificuldade + ".html";
+    window.location.href = '/index' + dificuldade + ".html";
 }
