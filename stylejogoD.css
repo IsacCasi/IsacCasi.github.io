@@ -169,10 +169,7 @@
 
 }
 @media (max-width:450px){
-    body{
-        gap: 1rem !important;
-    }
-    #status {
+    status {
         gap: 1rem !important;
         margin:auto !important;
     }
@@ -203,6 +200,7 @@
         grid-template-columns: repeat(4, 80px) !important;
         height: 16rem;
         align-items: center !important;
+        margin-top: -3rem !important;
 
         & img {
             width: 70px !important;
