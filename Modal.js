@@ -5,7 +5,7 @@ var btn_proximo = document.getElementById("btn-proximo");
 // FUNCITION BTN
 
 btn_menu.onclick = function () {
-    window.location.href = '/menuAxie.html';
+    window.location.href = '/index.html';
 }
 
 
