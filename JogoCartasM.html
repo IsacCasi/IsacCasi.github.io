@@ -20,24 +20,67 @@
 
     }
 
+    @media (max-width:600px){
+            #status {
+                gap: 6rem !important;
+            }
+    
+            #logo img {
+                max-width: 20rem !important;
+                max-height: 12rem !important;
+    
+            }
+    
+            .status-bar {
+                width: 200px !important;
+                height: 100px !important;
+                font-size: 1.5rem !important;
+                /* margin-top: 6rem !important; */
+    
+            }
+    
+            .card {
+                width: 70px !important;
+                height: 100px !important;
+                margin-bottom: 10px !important;
+            }
+    
+            .card-container {
+                display: grid;
+                grid-gap: 4px !important;
+                grid-template-columns: repeat(4, 80px) !important;
+                height: 16rem;
+                align-items: center !important;
+                /* margin-top: 1rem;
+                margin-left: 10px;] */
+                margin: auto !important;
+    
+                & img {
+                    width: 70px !important;
+                    height: 100px !important;
+                }
+    
+            }
+        }
+    
     @media (max-width:450px) {
 
         #status {
             gap: 1rem !important;
-
-
         }
 
-        #logo img {
+           #logo img {
             max-width: 20rem !important;
             max-height: 12rem !important;
-
+            margin-top: 1rem !important;
         }
-
+        .status{
+            margin: auto !important;
+        }
         .status-bar {
-            width: 300px !important;
-            height: 200px !important;
-            font-size: 2rem !important;
+            width: 250px !important;
+            height: 110px !important;
+            font-size: 1.5rem !important;
             /* margin-top: 6rem !important; */
 
         }
@@ -68,50 +111,7 @@
         
 
     }
-        @media (max-width:600px){
-        #status {
-            gap: 6rem !important;
-
-
-        }
-
-        #logo img {
-            max-width: 20rem !important;
-            max-height: 12rem !important;
-
-        }
-
-        .status-bar {
-            width: 200px !important;
-            height: 100px !important;
-            font-size: 1.5rem !important;
-            /* margin-top: 6rem !important; */
-
-        }
-
-        .card {
-            width: 70px !important;
-            height: 100px !important;
-            margin-bottom: 10px !important;
-        }
-
-        .card-container {
-            display: grid;
-            grid-gap: 4px !important;
-            grid-template-columns: repeat(4, 80px) !important;
-            height: 16rem;
-            align-items: center !important;
-            /* margin-top: 1rem;
-            margin-left: 10px;] */
-            margin: auto !important;
-
-            & img {
-                width: 70px !important;
-                height: 100px !important;
-            }
-
-        }
-    }
+        
     
 </style>
 
