@@ -100,25 +100,26 @@
 @media (max-width: 720px) {
 
     body {
-        margin: auto !important;
+        
         height: 100% !important;
     }
 
     #logo img {
         max-width: 30rem !important;
         max-height: 20rem !important;
-        margin: auto !important;
+        margin:auto !important;
     }
 
     #status {
         flex-direction: column;
         justify-content: center !important;
+        gap: 2rem !important;
     }
 
     .status-bar {
-        width: 400px !important;
-        height: 300px !important;
-
+        width: 300px !important;
+        height: 200px !important;
+        margin: auto !important;
     }
 
     /* cards */
@@ -135,9 +136,8 @@
 
         grid-template-columns: repeat(4, 110px) !important;
         height: 16rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         align-items: center !important;
-        margin-top: -1rem;
 
         & img {
             width: 100px !important;
@@ -320,7 +320,7 @@ body {
 }
 
 body {
-    background-image: url(axie_fundo.jpg);
+    background-image: url(axie\ fundo.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -348,9 +348,9 @@ body {
 
 #logo img {
     margin-top: 1rem;
-    width: 30rem;
+    width: 35rem;
     height: 20rem;
-
+    cursor: pointer;
 }
 
 /* STATUS JOGO - INICIO */
@@ -510,6 +510,10 @@ body {
         color: white;
     }
 }
+
+#result{
+    text-align: center;
+}
 /* BOTÃO MODAL */
 #btn-menu {
     background-color: rgb(0, 84, 194);
@@ -524,3 +528,11 @@ body {
 }
 
 /* MODAL - FIM*/
+
+/* H1 JOGADOR */
+#div-jogador{
+    background-color: #304d58;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+}

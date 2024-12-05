@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Memória Axie Díficil</title>
-    <link rel="stylesheet" href="styleJogo.css">
+    <link rel="stylesheet" href="stylejogo.css">
     <link rel="stylesheet" href="stylejogoD.css">
 </head>
 
 <style>
-    #status-bar{
+    #status-bar {
         margin-top: 6rem;
 
     }
@@ -18,7 +18,12 @@
 
 <body>
     <div id="logo">
-        <img src="logoAxie.png" alt=""/>
+        <img src="logoAxie.png" alt="" onclick="menuPagina()" />
+    </div>
+    <div id="div-jogador">
+
+        <h1 id="jogador"></h1>
+
     </div>
     <div id="status">
 
@@ -137,6 +142,7 @@
         <script src="Modal.js"></script>
         <script src="JogoCartas.js"></script>
         <script src="soundAxie.js"></script>
+        <script src="jsD.js"></script>
 
 </body>
 

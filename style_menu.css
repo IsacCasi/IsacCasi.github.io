@@ -332,3 +332,20 @@ body {
         font-family: 'Lilita One';
     }
 }
+
+/* INPUT PLAYER */
+
+#input-player{
+    display: flex;
+    gap: 1rem;
+}
+
+#nomeJogador {
+    width: 100%;
+    font-size: 2rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: black 0.5rem 0.5rem;
+    padding: 0.3rem;
+    font-weight: bold;
+}

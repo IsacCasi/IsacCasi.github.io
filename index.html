@@ -14,12 +14,17 @@
 
     <section id="menu">
         <div id="cont">
+
             <div id="logo">
                 <img src="logoAxie.png" alt="">
             </div>
 
-            <div id="iniciar">
+            <div id="input-player">
+                <input type="text" id="nomeJogador" />
+            </div>
 
+
+            <div id="iniciar">
                 <button id="start" class="dropdown-btn " onclick="toggleDropdown()">
                     <a class="dropdown-btn" onclick="toggleDropdown()">
                         <img src="espadas.png" alt="" class="dropdown-btn" onclick="toggleDropdown()">
@@ -27,17 +32,17 @@
                     </a>
                 </button>
                 <div id="dropdown-content" class="dropdown-content">
-                    <a href="indexF.html" id="op1">
-                        <img src="verde.png" alt="" id="easy">
+                    <a href="#" id="op1" onclick="iniciar('F')">
+                        <img src="asserts/verde.png" alt="" id="easy">
                         <h1>FÁCIL</h1>
                     </a>
-                    <a href="indexM.html" id="op2">
-                        <img src="amarelo.png" alt="" id="average">
+                    <a href="#" id="op2" onclick="iniciar('M')">
+                        <img src="asserts/amarelo.png" alt="" id="average">
                         <h1>MÉDIO</h1>
                     </a>
-                    <a href="indexD.html" id="op3">
-                        <img src="vermelho.png" alt="" id="hard">
-                        <h1>DIFÍCIL</h1>
+                    <a href="#" id="op3" onclick="iniciar('D')">
+                        <img src="asserts/vermelho.png" alt="" id="hard">
+                        <h1>DÍFICIL</h1>
                     </a>
                 </div>
                 <div id="selc">
@@ -64,6 +69,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
+        localStorage.removeItem("nomeJogador");
+        document.getElementById("nomeJogador").value = "";
+
         function toggleDropdown() {
             const dropdownContent = document.getElementById("dropdown-content");
             dropdownContent.classList.toggle("show");
@@ -79,6 +87,31 @@
                         openDropdown.classList.remove('show');
                     }
                 }
+            }
+        }
+
+
+        function iniciar(dificuldade) {
+            var nome = document.getElementById("nomeJogador").value;
+            if (nome) {
+                localStorage.setItem("nomeJogador", nome);
+                switch (dificuldade) {
+                    case 'F':
+                        window.location.href = "/jogoCartasF.html"
+                        break;
+                    case 'M':
+                        window.location.href = "/jogoCartasM.html"
+                        break;
+                    case 'D':
+                        window.location.href = "/jogoCartasD.html"
+                        break;
+
+                    default:
+                        break;
+
+                }
+            } else {
+                alert("escreva seu nome")
             }
         }
     </script>

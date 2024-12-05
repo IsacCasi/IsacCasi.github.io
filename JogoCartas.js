@@ -8,13 +8,19 @@ const totalPairs = cards.length / 2;
 var modal = document.getElementById("modal");
 var result_msg = document.getElementById("result");
 
+
 // AUDIOS
 const correctSound = document.getElementById('correct-sound');
 const fallSound = document.getElementById('fall-sound');
-
 const attemptsElement = document.getElementById('attempts');
 const correctElement = document.getElementById('correct');
 const wrongElement = document.getElementById('wrong');
+
+// JOGADOR
+const nomeJogador = localStorage.getItem('nomeJogador');
+let jogador = document.getElementById("jogador");
+
+jogador.innerHTML = "Olá " + nomeJogador + ", DIVIRTA-SE!!!";
 
 // get and sets
 
@@ -119,13 +125,14 @@ function resetBoard() {
 
 // Função para finalizar o jogo
 function gameOver(result) {
+    
     setTimeout(() => {
         if (result === 'win') {
-            result_msg.innerHTML = 'Parabéns! Você encontrou todos os pares e ganhou o jogo!';
+            result_msg.innerHTML = 'Parabéns ' + localStorage.getItem("nomeJogador") + ' !!! <br> Você encontrou todos os pares e ganhou o jogo!';
         } else if (result === 'lose') {
-            result_msg.innerHTML = 'Fim de jogo! Você esgotou suas tentativas.';
+            result_msg.innerHTML = 'Fim de jogo' + localStorage.getItem("nomeJogador") + '! <br> Você esgotou suas tentativas.';
         }
-        console.log(result);
+        
         modal.style.display = "block"
     }, 500);  // Exibe o alerta com um pequeno atraso para permitir que a última carta vire completamente
 
@@ -136,15 +143,23 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 // Desativar o botão direito do mouse
-// document.addEventListener('contextmenu', function(e) {
-//     e.preventDefault();
-// });
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
 
 // Bloquear teclas específicas (como F12 para inspecionar)
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown'), function (e) {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
         e.preventDefault();
     }
-});
+}
+
+function menuPagina() {
+
+    location.href = "/menuAxie.html";
+}
+
+// NOME JOGADOR
+
 
 
