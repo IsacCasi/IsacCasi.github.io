@@ -33,15 +33,15 @@
                 </button>
                 <div id="dropdown-content" class="dropdown-content">
                     <a href="#" id="op1" onclick="iniciar('F')">
-                        <img src="asserts/verde.png" alt="" id="easy">
+                        <img src="verde.png" alt="" id="easy">
                         <h1>FÁCIL</h1>
                     </a>
                     <a href="#" id="op2" onclick="iniciar('M')">
-                        <img src="asserts/amarelo.png" alt="" id="average">
+                        <img src="amarelo.png" alt="" id="average">
                         <h1>MÉDIO</h1>
                     </a>
                     <a href="#" id="op3" onclick="iniciar('D')">
-                        <img src="asserts/vermelho.png" alt="" id="hard">
+                        <img src="vermelho.png" alt="" id="hard">
                         <h1>DÍFICIL</h1>
                     </a>
                 </div>
@@ -97,13 +97,13 @@
                 localStorage.setItem("nomeJogador", nome);
                 switch (dificuldade) {
                     case 'F':
-                        window.location.href = "/jogoCartasF.html"
+                        window.location.href = "/indexF.html"
                         break;
                     case 'M':
-                        window.location.href = "/jogoCartasM.html"
+                        window.location.href = "/indexM.html"
                         break;
                     case 'D':
-                        window.location.href = "/jogoCartasD.html"
+                        window.location.href = "/indexD.html"
                         break;
 
                     default:

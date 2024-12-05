@@ -143,9 +143,9 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 
 // Desativar o botão direito do mouse
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
+// document.addEventListener('contextmenu', function(e) {
+//     e.preventDefault();
+// });
 
 // Bloquear teclas específicas (como F12 para inspecionar)
 document.addEventListener('keydown'), function (e) {
